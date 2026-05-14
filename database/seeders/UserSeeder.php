@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Administrator SISFREK',
                 'email' => 'admin@simfrek.test',
-                'password' => 'admin123',
+                'password' => env('ADMIN_DEFAULT_PASSWORD', 'change-me-admin'),
                 'is_admin' => true,
             ]
         );

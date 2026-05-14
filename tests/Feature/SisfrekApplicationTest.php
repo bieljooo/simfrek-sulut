@@ -34,7 +34,7 @@ class SisfrekApplicationTest extends TestCase
     {
         $response = $this->post('/login', [
             'login' => 'admin',
-            'password' => 'admin123',
+            'password' => env('ADMIN_DEFAULT_PASSWORD', 'change-me-admin'),
         ]);
 
         $response->assertRedirect('/admin');
